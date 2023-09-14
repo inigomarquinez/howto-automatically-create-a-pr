@@ -19,6 +19,8 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Create or update the pull request
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh pr create --draft --label "auto-pr" --title "My pull request" --body "Description" --base "development"
           # gh_pr_up() { gh pr create $* || gh pr edit $* }
