@@ -1,2 +1,3 @@
-# howto-automatically-create-a-pr
-How to use a GitHub action to create PRs for you
+# [HOW TO] Automatically create or update a PR
+
+How to use a GitHub action to create /update PRs for you.
