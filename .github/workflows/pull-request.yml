@@ -22,6 +22,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh pr create --draft --title "My pull request" --body "Description" --base "development"
+          gh pr create --draft --title "My pull request" --body "Description" --base "main"
           # gh_pr_up() { gh pr create $* || gh pr edit $* }
-          # gh_pr_up --draft --title "My pull request" --body "Description" --base "development"
+          # gh_pr_up --draft --title "My pull request" --body "Description" --base "main"
