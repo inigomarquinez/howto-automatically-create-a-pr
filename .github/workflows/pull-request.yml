@@ -24,4 +24,4 @@ jobs:
         run: |
           gh pr create --draft --label "auto-pr" --title "My pull request" --body "Description" --base "development"
           # gh_pr_up() { gh pr create $* || gh pr edit $* }
-          # gh_pr_up --draft --label "auto-pr" --title "My pull request" --body "Description" --base "development"
+          # gh_pr_up --draft --title "My pull request" --body "Description" --base "development"
