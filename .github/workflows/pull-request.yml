@@ -3,6 +3,7 @@ name: Automatically create / update pull request
 
 # run this workflow only on new feature branches, not when they're merged to main
 on:
+  workflow_dispatch:
   push:
     branches-ignore:
       - "main"
@@ -19,5 +20,6 @@ jobs:
 
       - name: Create or update the pull request
         run: |
-          gh_pr_up() { gh pr create $* || gh pr edit $* }
-          gh_pr_up --draft --label "auto-pr" --title "My pull request" --body "Description" --base "development"
+          gh pr create --draft --label "auto-pr" --title "My pull request" --body "Description" --base "development"
+          # gh_pr_up() { gh pr create $* || gh pr edit $* }
+          # gh_pr_up --draft --label "auto-pr" --title "My pull request" --body "Description" --base "development"
